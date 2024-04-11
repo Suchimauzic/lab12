@@ -1,0 +1,1223 @@
+{
+	"info": {
+		"_postman_id": "a497216f-18bb-4071-9654-d881b66a44ae",
+		"name": "lab12",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30353181",
+		"_collection_link": "https://www.postman.com/suchimauzic/workspace/testing-calculator-lab12/collection/30353181-a497216f-18bb-4071-9654-d881b66a44ae?action=share&source=collection_link&creator=30353181"
+	},
+	"item": [
+		{
+			"name": "Обычные действия",
+			"item": [
+				{
+					"name": "Правильные",
+					"item": [
+						{
+							"name": "Целочисленные",
+							"item": [
+								{
+									"name": "Сложение",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"7\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/add?fir=4&sec=3&td=int",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"add"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "4"
+												},
+												{
+													"key": "sec",
+													"value": "3"
+												},
+												{
+													"key": "td",
+													"value": "int"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Вычитание",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"1\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/sub?fir=4&sec=3&td=int",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"sub"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "4"
+												},
+												{
+													"key": "sec",
+													"value": "3"
+												},
+												{
+													"key": "td",
+													"value": "int"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Умножение",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"27\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/mul?fir=3&sec=9&td=int",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"mul"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "3"
+												},
+												{
+													"key": "sec",
+													"value": "9"
+												},
+												{
+													"key": "td",
+													"value": "int"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Деление",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"5\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/div?fir=25&sec=5&td=int",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"div"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "25"
+												},
+												{
+													"key": "sec",
+													"value": "5"
+												},
+												{
+													"key": "td",
+													"value": "int"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Корень",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"12\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/sqrt?fir=144&td=int",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"sqrt"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "144"
+												},
+												{
+													"key": "td",
+													"value": "int"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Степень",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"729\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/pow?fir=9&sec=3&td=int",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"pow"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "9"
+												},
+												{
+													"key": "sec",
+													"value": "3"
+												},
+												{
+													"key": "td",
+													"value": "int"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Вещественные",
+							"item": [
+								{
+									"name": "Сложение",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"7.0\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/add?fir=4&sec=3&td=float",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"add"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "4"
+												},
+												{
+													"key": "sec",
+													"value": "3"
+												},
+												{
+													"key": "td",
+													"value": "float"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Вычитание",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"1.0\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/sub?fir=4&sec=3&td=float",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"sub"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "4"
+												},
+												{
+													"key": "sec",
+													"value": "3"
+												},
+												{
+													"key": "td",
+													"value": "float"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Умножение",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"27.0\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/mul?fir=3&sec=9&td=float",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"mul"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "3"
+												},
+												{
+													"key": "sec",
+													"value": "9"
+												},
+												{
+													"key": "td",
+													"value": "float"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Деление",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"0.4\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/div?fir=2&sec=5&td=float",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"div"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "2"
+												},
+												{
+													"key": "sec",
+													"value": "5"
+												},
+												{
+													"key": "td",
+													"value": "float"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Корень",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"2.0\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/sqrt?fir=4&td=float",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"sqrt"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "4"
+												},
+												{
+													"key": "td",
+													"value": "float"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Степень",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"729.0\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/pow?fir=9&sec=3&td=float",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"pow"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "9"
+												},
+												{
+													"key": "sec",
+													"value": "3"
+												},
+												{
+													"key": "td",
+													"value": "float"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Некорректные",
+					"item": [
+						{
+							"name": "Деление на 0",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Division by 0\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://suchimauzic.pythonanywhere.com/div?fir=5&sec=0&td=int",
+									"protocol": "https",
+									"host": [
+										"suchimauzic",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"div"
+									],
+									"query": [
+										{
+											"key": "fir",
+											"value": "5"
+										},
+										{
+											"key": "sec",
+											"value": "0"
+										},
+										{
+											"key": "td",
+											"value": "int"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Корень отрицательного",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Error! Root of negative number\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://suchimauzic.pythonanywhere.com/sqrt?fir=-4&td=int",
+									"protocol": "https",
+									"host": [
+										"suchimauzic",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"sqrt"
+									],
+									"query": [
+										{
+											"key": "fir",
+											"value": "-4"
+										},
+										{
+											"key": "td",
+											"value": "int"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Тригонометрия",
+			"item": [
+				{
+					"name": "Правильные",
+					"item": [
+						{
+							"name": "Радианы",
+							"item": [
+								{
+									"name": "Sin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"0.8414709848078965\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://suchimauzic.pythonanywhere.com/sin?fir=1&mode=radian&td=int",
+											"protocol": "http",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"sin"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "1"
+												},
+												{
+													"key": "mode",
+													"value": "radian"
+												},
+												{
+													"key": "td",
+													"value": "int"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Cos",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"0.5403023058681398\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://suchimauzic.pythonanywhere.com/cos?fir=1&mode=radian&td=int",
+											"protocol": "http",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"cos"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "1"
+												},
+												{
+													"key": "mode",
+													"value": "radian"
+												},
+												{
+													"key": "td",
+													"value": "int"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Tan",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"1.5574077246549023\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://suchimauzic.pythonanywhere.com/tan?fir=1&mode=radian&td=int",
+											"protocol": "http",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"tan"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "1"
+												},
+												{
+													"key": "mode",
+													"value": "radian"
+												},
+												{
+													"key": "td",
+													"value": "int"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Градусы",
+							"item": [
+								{
+									"name": "Sin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"1.0\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://suchimauzic.pythonanywhere.com/sin?fir=90&mode=degree&td=int",
+											"protocol": "http",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"sin"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "90"
+												},
+												{
+													"key": "mode",
+													"value": "degree"
+												},
+												{
+													"key": "td",
+													"value": "int"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Cos",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"0.9986295347545738\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://suchimauzic.pythonanywhere.com/cos?fir=3&mode=degree&td=int",
+											"protocol": "http",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"cos"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "3"
+												},
+												{
+													"key": "mode",
+													"value": "degree"
+												},
+												{
+													"key": "td",
+													"value": "int"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Tan",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"0.17632698070846498\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://suchimauzic.pythonanywhere.com/tan?fir=10&mode=degree&td=int",
+											"protocol": "http",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"tan"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "10"
+												},
+												{
+													"key": "mode",
+													"value": "degree"
+												},
+												{
+													"key": "td",
+													"value": "int"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Некорректные",
+					"item": [
+						{
+							"name": "Тангенс 90 градусов",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Error!!\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://suchimauzic.pythonanywhere.com/tan?fir=90&mode=degree&td=int",
+									"protocol": "http",
+									"host": [
+										"suchimauzic",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"tan"
+									],
+									"query": [
+										{
+											"key": "fir",
+											"value": "90"
+										},
+										{
+											"key": "mode",
+											"value": "degree"
+										},
+										{
+											"key": "td",
+											"value": "int"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Тангенс 270 градусов",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Error!!\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://suchimauzic.pythonanywhere.com/tan?fir=270&mode=degree&td=int",
+									"protocol": "http",
+									"host": [
+										"suchimauzic",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"tan"
+									],
+									"query": [
+										{
+											"key": "fir",
+											"value": "270"
+										},
+										{
+											"key": "mode",
+											"value": "degree"
+										},
+										{
+											"key": "td",
+											"value": "int"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Танеген pi/2 радиан",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Error!!\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://suchimauzic.pythonanywhere.com/tan?fir=1.5707963267948966192313216916398&mode=radian&td=float",
+									"protocol": "http",
+									"host": [
+										"suchimauzic",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"tan"
+									],
+									"query": [
+										{
+											"key": "fir",
+											"value": "1.5707963267948966192313216916398"
+										},
+										{
+											"key": "mode",
+											"value": "radian"
+										},
+										{
+											"key": "td",
+											"value": "float"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Тангенс 3pi/2 радиан",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Error!!\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://suchimauzic.pythonanywhere.com/tan?fir=4.7123889803846898576939650749193&mode=radian&td=float",
+									"protocol": "http",
+									"host": [
+										"suchimauzic",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"tan"
+									],
+									"query": [
+										{
+											"key": "fir",
+											"value": "4.7123889803846898576939650749193"
+										},
+										{
+											"key": "mode",
+											"value": "radian"
+										},
+										{
+											"key": "td",
+											"value": "float"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
