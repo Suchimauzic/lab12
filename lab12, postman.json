@@ -299,6 +299,54 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "Остаток деления",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"2\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/mod?fir=27&sec=5&td=int",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"mod"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "27"
+												},
+												{
+													"key": "sec",
+													"value": "5"
+												},
+												{
+													"key": "td",
+													"value": "int"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						},
@@ -588,6 +636,54 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "Остаток деления",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Body matches string\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"2.0\");\r",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://suchimauzic.pythonanywhere.com/mod?fir=27&sec=5&td=float",
+											"protocol": "https",
+											"host": [
+												"suchimauzic",
+												"pythonanywhere",
+												"com"
+											],
+											"path": [
+												"mod"
+											],
+											"query": [
+												{
+													"key": "fir",
+													"value": "27"
+												},
+												{
+													"key": "sec",
+													"value": "5"
+												},
+												{
+													"key": "td",
+													"value": "float"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						}
@@ -678,6 +774,54 @@
 										{
 											"key": "fir",
 											"value": "-4"
+										},
+										{
+											"key": "td",
+											"value": "int"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Остаток деления на 0",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body matches string\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"Division by 0\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://suchimauzic.pythonanywhere.com/mod?fir=27&sec=0&td=int",
+									"protocol": "https",
+									"host": [
+										"suchimauzic",
+										"pythonanywhere",
+										"com"
+									],
+									"path": [
+										"mod"
+									],
+									"query": [
+										{
+											"key": "fir",
+											"value": "27"
+										},
+										{
+											"key": "sec",
+											"value": "0"
 										},
 										{
 											"key": "td",
